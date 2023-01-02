@@ -34,6 +34,14 @@
         color: #343a40;
         line-height: 1;
       }
+      .icon {
+        width: 24px;
+        height: 24px;
+        /* stroke: #087f5b; */
+      }
+      .open .icon{
+        stroke: #087f5b;
+      }
       .accordion {
         width: 700px;
         margin: 100px auto; /*to center this element to its parent which is the body: left and right margins to auto*/
@@ -59,11 +67,7 @@
         font-weight: 500;
         /* color: #087f5b; */
       }
-      .icon {
-        width: 24px;
-        height: 24px;
-        stroke: #087f5b;
-      }
+      
       .hidden-box {
         grid-column: 2;
         display: none;
@@ -79,13 +83,15 @@
         flex-direction: column;
         gap: 12px;
       }
+
       .open {
         border-top: #087f5b 4px solid;
-        /* color: #087f5b; */
       }
+
       .open .hidden-box {
         display: block;
       }
+
       .open .number,
       .open .text {
         color: #087f5b;
@@ -177,7 +183,7 @@
         </div>
       </div>
 
-      <div class="item">
+      <div class="item ">
         <p class="number">03</p>
         <p class="text">Do you ship to countries outside EU?</p>
         <svg
