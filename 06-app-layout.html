@@ -24,7 +24,6 @@
         grid-template-rows: 80px 1fr;
       }
       nav,
-      menu,
       section,
       aside,
       main {
@@ -39,6 +38,12 @@
         background-color: #7048e8;
         color: #fff;
         grid-column: 2 / -1;
+
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
       }
       aside {
         background-color: #e9ecef;
@@ -46,47 +51,33 @@
       section {
         background-color: #e9ecef;
       }
-      a {
-        text-decoration: none;
+      button{
+        display: inline-block;
+        font-size: 18px;
         background-color: #5f3dc4;
+        padding: 8px 12px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
         color: #fff;
-        padding: 8px 24px;
-        font-size: 16px;
       }
-      .trash {
-        background-color: #ae3ec9;
-        color: #fff;
-        font-size: 16px;
-       
+      button:last-child{
+        background-color: #d6336c;
+        margin-left: auto;
       }
-      .menu {
-        display: flex;
-        justify-content: space-between;
-      }
-      .left-side-menu{
-        padding-left: 36px;
-      }
-      .trash-padd{
-        padding-right: 36px;
-      }
+      
+      
       
     </style>
   </head>
   <body>
     <nav>Nav</nav>
     <menu>
-      <div class="menu">
-        <div class="left-side-menu">
-          <a href="">New</a>
-          <a href="">Reply</a>
-          <a href="">Forward</a>
-          <a href="">Mark Unread</a>
-        </div>
-        <div class="trash-padd">
-          <a href="" class="trash">Trash</a>
-        </div>
-        
-      </div>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark Unread</button>
+      <button>Trash</button>
     </menu>
     <section>Inbox</section>
     <main>Email view</main>
