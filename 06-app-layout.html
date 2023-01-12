@@ -24,7 +24,6 @@
         grid-template-rows: 80px 1fr;
       }
       nav,
-      section,
       aside,
       main {
         padding-top: 24px;
@@ -40,7 +39,6 @@
         grid-column: 2 / -1;
 
         display: flex;
-        /* justify-content: space-between; */
         align-items: center;
         gap: 12px;
         padding: 0 40px;
@@ -50,6 +48,15 @@
       }
       section {
         background-color: #e9ecef;
+        padding: 40px;
+
+        /* how elements that don't fit into container appear    */
+        overflow: scroll;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      
       }
       button{
         display: inline-block;
@@ -65,9 +72,15 @@
         background-color: #d6336c;
         margin-left: auto;
       }
-      
-      
-      
+      .email{
+        background-color: #adb5bd;
+        height: 96px;
+        flex-shrink: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -79,7 +92,18 @@
       <button>Mark Unread</button>
       <button>Trash</button>
     </menu>
-    <section>Inbox</section>
+    <section>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+      <div class="email">Email</div>
+    </section>
     <main>Email view</main>
     <aside>Additional info</aside>
   </body>
