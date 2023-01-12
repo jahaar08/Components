@@ -1,54 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application Layout</title>
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body{
-      font-family: sans-serif;
-      color: #343a40;
-      font-size: 24px;
-      height: 100vh;
-      text-align: center;
-      font-weight: bold;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+        font-size: 24px;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
 
-      display: grid;
-      grid-template-columns: 80px 400px 1fr 250px;
-      grid-template-rows: 80px 1fr;
-    }
-    nav, menu, section, aside, main {
-      padding-top: 24px;
-    }
-    nav{
-      background-color: #343a40;
-      color: #fff;
-      grid-row: 1 / -1;
-    }
-    menu{
-      background-color: #7048e8;
-      color: #fff;
-      grid-column: 2 / -1;
-    }
-    aside{
-      background-color: #e9ecef;
-    }
-    section{
-      background-color: #e9ecef;
-    }
-  </style>
-</head>
-<body>
-  <nav>Nav</nav>
-  <menu>Menu</menu>
-  <section>Inbox</section>
-  <main>Email view</main>
-  <aside>Additional info</aside>
-</body>
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+      }
+      nav,
+      menu,
+      section,
+      aside,
+      main {
+        padding-top: 24px;
+      }
+      nav {
+        background-color: #343a40;
+        color: #fff;
+        grid-row: 1 / -1;
+      }
+      menu {
+        background-color: #7048e8;
+        color: #fff;
+        grid-column: 2 / -1;
+      }
+      aside {
+        background-color: #e9ecef;
+      }
+      section {
+        background-color: #e9ecef;
+      }
+      a {
+        text-decoration: none;
+        background-color: #5f3dc4;
+        color: #fff;
+        padding: 8px 24px;
+        font-size: 16px;
+      }
+      .trash {
+        background-color: #ae3ec9;
+        color: #fff;
+        font-size: 16px;
+       
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+      }
+      .left-side-menu{
+        padding-left: 36px;
+      }
+      .trash-padd{
+        padding-right: 36px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <div class="menu">
+        <div class="left-side-menu">
+          <a href="">New</a>
+          <a href="">Reply</a>
+          <a href="">Forward</a>
+          <a href="">Mark Unread</a>
+        </div>
+        <div class="trash-padd">
+          <a href="" class="trash">Trash</a>
+        </div>
+        
+      </div>
+    </menu>
+    <section>Inbox</section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+  </body>
 </html>
